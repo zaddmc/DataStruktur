@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStrukturBullshit", "DataStrukturBullshit\DataStrukturBullshit.csproj", "{27E6CAE7-A9F0-459C-BA80-EF3FB04F7647}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Espen", "Espen\Espen.csproj", "{B04646FC-44AC-48C5-BD99-30DBE446A23B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27E6CAE7-A9F0-459C-BA80-EF3FB04F7647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27E6CAE7-A9F0-459C-BA80-EF3FB04F7647}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27E6CAE7-A9F0-459C-BA80-EF3FB04F7647}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27E6CAE7-A9F0-459C-BA80-EF3FB04F7647}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B04646FC-44AC-48C5-BD99-30DBE446A23B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B04646FC-44AC-48C5-BD99-30DBE446A23B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B04646FC-44AC-48C5-BD99-30DBE446A23B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B04646FC-44AC-48C5-BD99-30DBE446A23B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0311904C-AAD1-4897-A3D7-DC7E8872815D}
+	EndGlobalSection
+EndGlobal
