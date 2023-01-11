@@ -1,16 +1,15 @@
-﻿using System.Globalization;
-
-namespace DataStrukturBullshit
+﻿namespace DataStrukturBullshit
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             string[] strings = { "cat", "something", "car", "fish", "boat", "potato" };
-            string index = "car";
-            int chanI = 2;
+            string Change = "car";
+            int Index = 2;
 
-            Console.WriteLine(Opgave1_1(strings, index));
+            Opgave1_3(strings, Change, Index);
+            //Opgave5_1();
 
         }
         static private int Opgave1_1(string[] zeArray, string zeString)
@@ -44,11 +43,62 @@ namespace DataStrukturBullshit
             }
             else
                 return (false, zeArray);
-            return (true, newArray);            
+            return (true, newArray);
+        }
+        static (bool, string[]) Opgave1_3(string[] zeArray, string zeString, int zeIndex)
+        {
+            string[] newArray = new string[zeArray.Length + 1];
+            if (zeIndex <= zeArray.Length)
+            {
+                for (int i = 0; i < newArray.Length; i++)
+                {
+                    if (i == zeIndex)
+                    {
+                        newArray[i] = zeString;
+                        continue;
+                    }
+                    if (zeIndex > i) newArray[i] = zeArray[i];
+                    else newArray[i] = zeArray[i - 1];
+                }
+            }
+            else
+                return (false, zeArray);
+            return (true, newArray);
+        }
+        static int Opgave2_1(int[] zeArray, int zeItem)
+        {
+            for (int i = 0; i < zeArray.Length; i++)
+            {
+                if (zeArray[i] == zeItem)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+        static int Opgave2_2(int[] zeArray, int zeItem)
+        {
+            int low, high, mid;
+            low = 0;
+            high = zeArray.Length - 1;
+            mid = (low + high) / 2;
+            while (low <= high)
+            {
+                if (zeArray[mid] == zeItem)
+                    return mid + 1;
+                else
+                    if (zeItem < zeArray[mid])
+                    high = mid - 1;
+                else
+                    low = mid + 1;
+                mid = (low + high) / 2;
+            }
+            return -1;
+
         }
         static void Opgave3_1()
         {
-            List<int> values= new List<int>();
+            List<int> values = new List<int>();
             values.Add(10);
             values.Add(20);
             values.Add(30);
@@ -56,14 +106,35 @@ namespace DataStrukturBullshit
             values.Add(15);
             values.Sort();
             values.Reverse();
-
         }
         static void Opgave3_2()
         {
-
-
-
-
+            List<char> chars = new List<char>();
+            string strings = "Snakke bagvendt";
+            for (int i = 0; i < strings.Length; i++)
+            {
+                chars.Add(strings[i]);
+            }
+            chars.Reverse();
+        }
+        static void Opgave4_1()
+        {
+            Dictionary<string, string> dic = new Dictionary<string, string>();
+            dic = new Dictionary<string, string>() { { "docx", "Word" }, { "xlsx", "Excel" }, { "rtf", "Word" }, { "pptx", "PowerPoint" } };
+            Console.WriteLine(dic["rtf"]);
+            static void Opgave5_1()
+            {
+                Stack<char> myStack = new Stack<char>();
+                string strings = "Snakke bagvendt";
+                for (int i = 0; i < strings.Length; i++)
+                {
+                    myStack.Push(strings[i]);
+                }
+                for (int i = myStack.Count; i != 0; i = myStack.Count)
+                {
+                    Console.Write(myStack.Pop());
+                }
+            }
         }
     }
 }
