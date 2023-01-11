@@ -8,8 +8,8 @@
             string Change = "car";
             int Index = 2;
 
-            Opgave1_3(strings, Change, Index);
-            //Opgave5_1();
+            //Opgave1_3(strings, Change, Index);
+            Opgave5_2();
 
         }
         static private int Opgave1_1(string[] zeArray, string zeString)
@@ -98,10 +98,7 @@
         }
         static void Opgave3_1()
         {
-            List<int> values = new List<int>();
-            values.Add(10);
-            values.Add(20);
-            values.Add(30);
+            List<int> values = new List<int>() { 10, 20, 30 };
             values.Add(40);
             values.Add(15);
             values.Sort();
@@ -122,19 +119,34 @@
             Dictionary<string, string> dic = new Dictionary<string, string>();
             dic = new Dictionary<string, string>() { { "docx", "Word" }, { "xlsx", "Excel" }, { "rtf", "Word" }, { "pptx", "PowerPoint" } };
             Console.WriteLine(dic["rtf"]);
-            static void Opgave5_1()
+        }
+        static void Opgave5_1()
+        {
+            Stack<int> myStack = new Stack<int>();
+            for (int i = 1; i < 6; i++)
             {
-                Stack<char> myStack = new Stack<char>();
-                string strings = "Snakke bagvendt";
-                for (int i = 0; i < strings.Length; i++)
-                {
-                    myStack.Push(strings[i]);
-                }
-                for (int i = myStack.Count; i != 0; i = myStack.Count)
-                {
-                    Console.Write(myStack.Pop());
-                }
+                myStack.Push(i);
+            }
+
+            while(myStack.Count > 0)
+            {
+                Console.Write(myStack.Pop() + ", ");
+            }
+            Console.WriteLine();
+        }
+        static void Opgave5_2()
+        {
+            Stack<char> myStack = new Stack<char>();
+            string strings = "Snakke bagvendt";
+            for (int i = 0; i < strings.Length; i++)
+            {
+                myStack.Push(strings[i]);
+            }
+            while (myStack.Count > 0)
+            {
+                Console.Write(myStack.Pop());
             }
         }
+
     }
 }
