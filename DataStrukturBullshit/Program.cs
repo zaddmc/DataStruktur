@@ -9,7 +9,7 @@
             int Index = 2;
 
             //Opgave1_3(strings, Change, Index);
-            Opgave5_2();
+            Opgave6_1();
 
         }
         static private int Opgave1_1(string[] zeArray, string zeString)
@@ -128,7 +128,7 @@
                 myStack.Push(i);
             }
 
-            while(myStack.Count > 0)
+            while (myStack.Count > 0)
             {
                 Console.Write(myStack.Pop() + ", ");
             }
@@ -146,6 +146,15 @@
             {
                 Console.Write(myStack.Pop());
             }
+        }
+        static void Opgave6_1()
+        {
+            Queue<int> myQueue = new Queue<int>();
+            for (int i = 1; i < 6; i++)
+                myQueue.Enqueue(i);
+            while (myQueue.Count > 0)
+            Console.WriteLine(myQueue.Dequeue());
+
         }
 
     }
